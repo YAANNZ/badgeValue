@@ -21,8 +21,8 @@
     badgeView.layer.cornerRadius = 8;
     badgeView.backgroundColor = [UIColor redColor];
     int itemW = self.frame.size.width / tabBarItemNum;
-    badgeView.frame = CGRectMake((index + 0.7) * itemW, 3, 16, 16);
-    
+    badgeView.frame = CGRectMake((int)((index + 0.68) * itemW), 3, 16, 16); // 小数会造成模糊，强转只是去掉小说点后位数，不会四舍五入
+//    NSLog(@"%d--%f",(int)((index + 0.68) * itemW), (index + 0.68) * itemW);
     [self addSubview:badgeView];
 }
 
