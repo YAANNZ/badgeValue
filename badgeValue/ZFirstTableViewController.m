@@ -7,6 +7,7 @@
 //
 
 #import "ZFirstTableViewController.h"
+#import "UITabBar+badge.h"
 
 @interface ZFirstTableViewController () 
 
@@ -29,21 +30,21 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.backgroundColor = [UIColor blackColor];
     [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadOldData)];
 
+    [self.navigationController.tabBarController.tabBar showBadgeWithIndex:0];
+    [self.navigationController.tabBarController.tabBar showBadgeWithIndex:1];
 }
 
 - (void)loadNewData
 {
+    // 测试用
     self.navigationController.tabBarItem.badgeValue = nil;
+    [self.navigationController.tabBarController.tabBar hideBadgeWithIndex:self.navigationController.tabBarController.selectedIndex];
     
+    // 更新前面的数据结束刷新
     NSString *newStr = [NSString stringWithFormat:@"%d",((NSString *)[self.dataArray firstObject]).intValue - 1];
     [self.dataArray insertObject:newStr atIndex:0];
     [self.tableView reloadData];
@@ -52,6 +53,11 @@
 
 - (void)loadOldData
 {
+    // 测试用
+    self.navigationController.tabBarItem.badgeValue = @"3";
+    [self.navigationController.tabBarController.tabBar showBadgeWithIndex:self.navigationController.tabBarController.selectedIndex];
+    
+    // 更新前面的数据结束刷新
     NSString *oldStr = [NSString stringWithFormat:@"%d",((NSString *)[self.dataArray lastObject]).intValue + 1];
     [self.dataArray addObject:oldStr];
     [self.tableView reloadData];

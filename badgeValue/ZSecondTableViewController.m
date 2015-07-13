@@ -8,6 +8,7 @@
 
 #import "ZSecondTableViewController.h"
 #import "ZSecondTableViewCell.h"
+#import "UITabBar+badge.h"
 
 @interface ZSecondTableViewController ()
 
@@ -18,6 +19,7 @@
 
 @implementation ZSecondTableViewController
 
+// 懒加载
 - (NSMutableArray *)dataArray
 {
     if (_dataArray == nil)
@@ -35,13 +37,15 @@
     
     [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadOldData)];
-    
 }
 
 - (void)loadNewData
 {
+    // 测试用
     self.navigationController.tabBarItem.badgeValue = nil;
+    [self.navigationController.tabBarController.tabBar hideBadgeWithIndex:self.navigationController.tabBarController.selectedIndex];
     
+    // 更新前面的数据结束刷新
     int newData = ((NSString *)[self.dataArray firstObject]).intValue - 1;
     
     if (newData >= 0)
@@ -59,6 +63,11 @@
 
 - (void)loadOldData
 {
+    // 测试用
+    self.navigationController.tabBarItem.badgeValue = @"3";
+    [self.navigationController.tabBarController.tabBar showBadgeWithIndex:self.navigationController.tabBarController.selectedIndex];
+    
+    // 更新后面的数据结束刷新
     int oldData = ((NSString *)[self.dataArray lastObject]).intValue + 1;
     if (oldData <= 20)
     {

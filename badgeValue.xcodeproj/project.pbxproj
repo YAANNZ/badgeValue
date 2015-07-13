@@ -15,6 +15,7 @@
 		88AD5D771B451FBC00EB5A73 /* ZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AD5D761B451FBC00EB5A73 /* ZTabBarViewController.m */; };
 		88AD5D7A1B451FFD00EB5A73 /* ZFirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AD5D791B451FFD00EB5A73 /* ZFirstTableViewController.m */; };
 		88AD5D7D1B45200E00EB5A73 /* ZSecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AD5D7C1B45200E00EB5A73 /* ZSecondTableViewController.m */; };
+		88CED0451B5353D400C7BE5A /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CED0441B5353D400C7BE5A /* UITabBar+badge.m */; };
 		88F2FA0F1B466E6F003D28AB /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88F2F9F71B466E6F003D28AB /* MJRefresh.bundle */; };
 		88F2FA101B466E6F003D28AB /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F2F9FA1B466E6F003D28AB /* MJRefreshComponent.m */; };
 		88F2FA111B466E6F003D28AB /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F2F9FC1B466E6F003D28AB /* MJRefreshConst.m */; };
@@ -57,6 +58,8 @@
 		88AD5D791B451FFD00EB5A73 /* ZFirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFirstTableViewController.m; sourceTree = "<group>"; };
 		88AD5D7B1B45200E00EB5A73 /* ZSecondTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSecondTableViewController.h; sourceTree = "<group>"; };
 		88AD5D7C1B45200E00EB5A73 /* ZSecondTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSecondTableViewController.m; sourceTree = "<group>"; };
+		88CED0431B5353D400C7BE5A /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
+		88CED0441B5353D400C7BE5A /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
 		88F2F9F71B466E6F003D28AB /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		88F2F9F81B466E6F003D28AB /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		88F2F9F91B466E6F003D28AB /* MJRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				88AD5D7C1B45200E00EB5A73 /* ZSecondTableViewController.m */,
 				889C8BDA1B4A733100C3F251 /* ZSecondTableViewCell.h */,
 				889C8BDB1B4A733100C3F251 /* ZSecondTableViewCell.m */,
+				88CED0431B5353D400C7BE5A /* UITabBar+badge.h */,
+				88CED0441B5353D400C7BE5A /* UITabBar+badge.m */,
 			);
 			path = badgeValue;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				88AD5D491B45139100EB5A73 /* AppDelegate.m in Sources */,
 				88F2FA121B466E6F003D28AB /* MJRefreshFooter.m in Sources */,
 				88F2FA181B466E6F003D28AB /* UIScrollView+MJExtension.m in Sources */,
+				88CED0451B5353D400C7BE5A /* UITabBar+badge.m in Sources */,
 				88F2FA131B466E6F003D28AB /* MJRefreshGifFooter.m in Sources */,
 				88AD5D7D1B45200E00EB5A73 /* ZSecondTableViewController.m in Sources */,
 				88F2FA101B466E6F003D28AB /* MJRefreshComponent.m in Sources */,
